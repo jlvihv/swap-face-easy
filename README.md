@@ -92,8 +92,3 @@ AI 模型会在首次运行时自动下载，存储在：
 - **macOS**: `~/Library/Application Support/swap-face-easy/models`
 - **Windows**: `%APPDATA%/swap-face-easy/models`
 
----
-
-## License
-
-MIT License
