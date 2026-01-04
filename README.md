@@ -18,7 +18,7 @@ A fast and easy-to-use face swapping tool powered by AI.
 
 | Platform | Download | GPU Support |
 |----------|----------|-------------|
-| macOS (Apple Silicon) | [⬇️ Download](https://github.com/jlvihv/swap-face-easy/releases/latest/download/swap-face-easy-macos-aarch64.tar.gz) | CoreML |
+| macOS (Apple Silicon) | [⬇️ Download](https://github.com/jlvihv/swap-face-easy/releases/latest/download/swap-face-easy-macos-aarch64.zip) | CoreML |
 | Windows | [⬇️ Download](https://github.com/jlvihv/swap-face-easy/releases/latest/download/swap-face-easy-windows-x86_64.zip) | DirectML (all GPUs) |
 
 Or visit the [Releases](https://github.com/jlvihv/swap-face-easy/releases) page for all versions.
@@ -63,7 +63,7 @@ AI models are automatically downloaded on first run and stored in:
 
 | 平台 | 下载 | GPU 支持 |
 |------|------|----------|
-| macOS (Apple Silicon) | [⬇️ 下载](https://github.com/jlvihv/swap-face-easy/releases/latest/download/swap-face-easy-macos-aarch64.tar.gz) | CoreML |
+| macOS (Apple Silicon) | [⬇️ 下载](https://github.com/jlvihv/swap-face-easy/releases/latest/download/swap-face-easy-macos-aarch64.zip) | CoreML |
 | Windows | [⬇️ 下载](https://github.com/jlvihv/swap-face-easy/releases/latest/download/swap-face-easy-windows-x86_64.zip) | DirectML (支持所有显卡) |
 
 或访问 [Releases](https://github.com/jlvihv/swap-face-easy/releases) 页面查看所有版本。
