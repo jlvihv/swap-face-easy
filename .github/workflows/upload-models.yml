@@ -3,6 +3,9 @@ name: Upload Models
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   upload-models:
     runs-on: ubuntu-latest
@@ -12,19 +15,10 @@ jobs:
         run: |
           mkdir -p models
           cd models
-
-          # arcface_w600k_r50.onnx
           wget -q https://huggingface.co/facefusion/models-3.0.0/resolve/main/arcface_w600k_r50.onnx
-
-          # hyperswap_1a_256.onnx
           wget -q https://huggingface.co/facefusion/models-3.3.0/resolve/main/hyperswap_1a_256.onnx
-
-          # yoloface_8n.onnx
           wget -q https://huggingface.co/crj/dl-ws/resolve/main/yoloface_8n.onnx
-
-          # face_mesh.onnx (renamed from face_mesh_Nx3x192x192_post.onnx)
           wget -q -O face_mesh.onnx https://github.com/PINTO0309/facemesh_onnx_tensorrt/releases/download/1.0.0/face_mesh_Nx3x192x192_post.onnx
-
           ls -lh
 
       - name: Package models
@@ -36,18 +30,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Delete existing release if exists
           gh release delete models-v1 --repo ${{ github.repository }} --yes 2>/dev/null || true
-
-          # Create new release with models
           gh release create models-v1 \
             --repo ${{ github.repository }} \
             --title "Models v1" \
-            --notes "AI models for swap-face-easy (~520MB)
-
-          Contains:
-          - arcface_w600k_r50.onnx
-          - hyperswap_1a_256.onnx
-          - yoloface_8n.onnx
-          - face_mesh.onnx" \
+            --notes "AI models for swap-face-easy (~520MB)" \
             models.tar.gz
